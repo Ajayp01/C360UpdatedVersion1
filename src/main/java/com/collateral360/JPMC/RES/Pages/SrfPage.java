@@ -177,20 +177,19 @@ public class SrfPage extends Base {
 		o.SelectDates(dd,mm,yy);
 		Thread.sleep(2000);		
 		driver.findElement(isSbaLoanRadioButton).click();
-		//w.WaitForSomeTime();
+		
 	
 		Select s4=new Select(driver.findElement(sbaTypeDropdown));
 		s4.selectByValue(e.ReadExcel("JPMC", 5, 8));
-		//w.WaitForSomeTime();
+		
 		
 		driver.findElement(intendedUsers).sendKeys(e.ReadExcel("JPMC", 5, 9));
-		//w.WaitForSomeTime();
+
 		driver.findElement(cDCPartners).sendKeys(e.ReadExcel("JPMC", 5, 10));
 		
 		//Participation/Syndication
 		
 		driver.findElement(participationSyndication).click();
-		//w.WaitForSomeTime();
 		driver.findElement(aggregateLoanAmount).sendKeys(e.ReadExcel("JPMC", 5, 12));
 		driver.findElement(jPMCShare).sendKeys(e.ReadExcel("JPMC", 5, 13));
 		driver.findElement(administrativeAgent).click();
@@ -233,7 +232,7 @@ public class SrfPage extends Base {
 		
 	    Select s5=new Select(driver.findElement(propertyType));
 		s5.selectByValue(e.ReadExcel("JPMC", 9, 1));
-		//w.WaitForSomeTime();
+		
 		
 		Select s6=new Select(driver.findElement(propertySubType));
 		s6.selectByVisibleText(e.ReadExcel("JPMC", 9, 2));
@@ -247,7 +246,7 @@ public class SrfPage extends Base {
 		driver.findElement(city).sendKeys(e.ReadExcel("JPMC", 9, 7));
 		Select s8=new Select(driver.findElement(state));
 		s8.selectByValue(e.ReadExcel("JPMC", 9, 8));
-		//w.WaitForSomeTime();
+		
 		driver.findElement(mAPPROPERTYButton).click();
 		Thread.sleep(6000);
 		
@@ -259,7 +258,7 @@ public class SrfPage extends Base {
 		if(Services.equalsIgnoreCase("2"))
 		{
 			driver.findElement(vALService).click();
-			//w.WaitForSomeTime();
+			
 			driver.findElement(eNVService).click();
 			Select s9=new Select(driver.findElement(purposeVAL));
 			s9.selectByValue(e.ReadExcel("JPMC", 9, 10));
@@ -278,9 +277,9 @@ public class SrfPage extends Base {
 				driver.findElement(By.xpath("//input[@id='ValuationPremise"+i+"']")).click();
 			}
 			
-		//w.WaitForSomeTime();	
+			
 		driver.findElement(propInterestOther).sendKeys(e.ReadExcel("JPMC", 9, 13));
-		//w.WaitForSomeTime();
+		
 		driver.findElement(valuationPremiseOther).sendKeys(e.ReadExcel("JPMC", 9, 14));
 		Select s12=new Select(driver.findElement(purposeENV));
 		s12.selectByValue(e.ReadExcel("JPMC", 9, 15));
@@ -326,8 +325,6 @@ public class SrfPage extends Base {
 		
 		Select s16=new Select(driver.findElement(tenancy));
 		s16.selectByValue(e.ReadExcel("JPMC", 9, 31));
-		
-		//w.WaitForSomeTime();
 		driver.findElement(occupancy).sendKeys(e.ReadExcel("JPMC", 9, 32));
 		driver.findElement(thirdParty).sendKeys(e.ReadExcel("JPMC", 9, 33));
 		driver.findElement(tenants).sendKeys(e.ReadExcel("JPMC", 9, 34));
