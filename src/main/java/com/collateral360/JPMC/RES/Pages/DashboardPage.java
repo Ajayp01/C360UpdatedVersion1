@@ -113,7 +113,6 @@ public class DashboardPage extends Base {
 		WebElement Button=driver.findElement(settingsButton);
 		WebDriverWait wait=new WebDriverWait(driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(Button));
-		
 		driver.findElement(createRequestButton).click();
 	}
 	

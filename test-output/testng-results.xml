@@ -2,50 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59356" started-at="2019-07-04T12:00:17Z" finished-at="2019-07-04T12:01:17Z">
+  <suite name="Default suite" duration-ms="177553" started-at="2019-07-04T12:39:05Z" finished-at="2019-07-04T12:42:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59356" started-at="2019-07-04T12:00:17Z" finished-at="2019-07-04T12:01:17Z">
-      <class name="collateral.tests.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:collateral.tests.LoginPageTest@470734c3]" name="setup" is-config="true" duration-ms="25311" started-at="2019-07-04T12:00:17Z" finished-at="2019-07-04T12:00:43Z">
+    <test name="Default test" duration-ms="177553" started-at="2019-07-04T12:39:05Z" finished-at="2019-07-04T12:42:03Z">
+      <class name="collateral.tests.SrfTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="setup" is-config="true" duration-ms="45504" started-at="2019-07-04T12:39:05Z" finished-at="2019-07-04T12:39:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:collateral.tests.LoginPageTest@470734c3]" name="loginPageTitleTest" duration-ms="15" started-at="2019-07-04T12:00:43Z" finished-at="2019-07-04T12:00:43Z">
+        <test-method status="PASS" signature="closeButtonTest()[pri:1, instance:collateral.tests.SrfTest@470734c3]" name="closeButtonTest" duration-ms="398" started-at="2019-07-04T12:39:51Z" finished-at="2019-07-04T12:39:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:collateral.tests.LoginPageTest@470734c3]" name="teardown" is-config="true" duration-ms="1726" started-at="2019-07-04T12:00:43Z" finished-at="2019-07-04T12:00:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginPageTitleTest status=SUCCESS method=LoginPageTest.loginPageTitleTest()[pri:1, instance:collateral.tests.LoginPageTest@470734c3] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- closeButtonTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="teardown" is-config="true" duration-ms="2073" started-at="2019-07-04T12:39:51Z" finished-at="2019-07-04T12:39:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:collateral.tests.LoginPageTest@470734c3]" name="setup" is-config="true" duration-ms="22299" started-at="2019-07-04T12:00:45Z" finished-at="2019-07-04T12:01:07Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="setup" is-config="true" duration-ms="43816" started-at="2019-07-04T12:39:53Z" finished-at="2019-07-04T12:40:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signTest()[pri:2, instance:collateral.tests.LoginPageTest@470734c3]" name="signTest" duration-ms="7773" started-at="2019-07-04T12:01:07Z" finished-at="2019-07-04T12:01:15Z">
+        <test-method status="PASS" signature="resCreateSRF()[pri:2, instance:collateral.tests.SrfTest@470734c3]" name="resCreateSRF" duration-ms="83738" started-at="2019-07-04T12:40:37Z" finished-at="2019-07-04T12:42:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signTest -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:collateral.tests.LoginPageTest@470734c3]" name="teardown" is-config="true" duration-ms="2182" started-at="2019-07-04T12:01:15Z" finished-at="2019-07-04T12:01:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signTest status=SUCCESS method=LoginPageTest.signTest()[pri:2, instance:collateral.tests.LoginPageTest@470734c3] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- resCreateSRF -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="teardown" is-config="true" duration-ms="1981" started-at="2019-07-04T12:42:01Z" finished-at="2019-07-04T12:42:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- collateral.tests.LoginPageTest -->
+      </class> <!-- collateral.tests.SrfTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

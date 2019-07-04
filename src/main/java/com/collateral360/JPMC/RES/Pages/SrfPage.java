@@ -121,7 +121,7 @@ public class SrfPage extends Base {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(sRFpage));
 		//Thread.sleep(10000);
 		//driver.switchTo().frame(driver.findElement(sRFpage));
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 		
 		RESTransactionTab();
 		RESCollateralTab();
@@ -137,6 +137,13 @@ public class SrfPage extends Base {
 	
 	private void RESTransactionTab() throws Exception
 	{
+		WebDriverWait wait=new WebDriverWait(driver,40);
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='ProjectName']")));
+		WebElement element1 =driver.findElement(projectName);
+		wait.until(ExpectedConditions.elementToBeClickable(projectName));
+		element1.sendKeys(e.ReadExcel("JPMC", 5, 1));
+		
+		
 		driver.findElement(projectName).sendKeys(e.ReadExcel("JPMC", 5, 1));
 		driver.findElement(loanNumber).sendKeys(e.ReadExcel("JPMC", 5, 2));
 		driver.findElement(loanAmount).sendKeys(e.ReadExcel("JPMC", 5, 3));

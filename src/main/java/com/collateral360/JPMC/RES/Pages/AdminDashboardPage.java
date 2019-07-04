@@ -20,10 +20,6 @@ public class AdminDashboardPage extends Base {
 	
 	By LoggedUser=By.xpath("//div[@id='userInfo']/button/span");
 	
-	
-	public WebDriver driver;
-	Excel e;
-	
 	public void Impersonate(String Key,String aid) throws Exception
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 25);

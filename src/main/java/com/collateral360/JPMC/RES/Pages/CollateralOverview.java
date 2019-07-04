@@ -10,8 +10,6 @@ import com.collateral360.qa.base.Base;
 import com.collateral360.qa.utilities.Wait;;
 public class CollateralOverview extends Base{
 
-	
-	public WebDriver driver;
 	protected ArrayList<String> VALService;
 	
 	public CollateralOverview() throws Exception {
@@ -75,7 +73,6 @@ public class CollateralOverview extends Base{
 						}
 			
 					}
-			
 					catch(Exception e)
 			 
 					{

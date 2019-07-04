@@ -41,7 +41,7 @@ public class SrfTest extends Base {
 	{
 		l.validateCloseButton();
 	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void resCreateSRF() throws Exception
 	{		
 		l.RESCreateLoan();
