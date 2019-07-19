@@ -22,11 +22,11 @@ public class RFP extends Base {
 	Wait w;
 	public String aid;
 	
-	public RFP(WebDriver driver) throws Exception {
+	public RFP() throws Exception {
 		super();
 	}
 	By RFPpage=By.xpath("//iframe[@name='sb-player']");
-	By ValuationLink=By.xpath("//div[@id='siteMenu']/ul/li[2]/a[text()='Valuation']");	
+	
 	By BidResponseDue=By.id("VendorResponseDateDt");
 	By DesiredReportDeliveryDate=By.id("ReportDeliveryDateDt");
 	By ReviewerName=By.id("ReviewerName");
@@ -67,16 +67,24 @@ public class RFP extends Base {
 	By firstVendorName=By.xpath("//table[@id='vendorSelectTable']//tbody[@role='alert']/tr[1]/td[4]/a");
 	By firstVendorAid=By.xpath("//a[contains(@href,'https://preuat.collateral360.com/lenderPortal/vendorManagement/editVendorProfile')]");
 	
-	public void CheckService() throws Exception
+	String id=null;
+	public String createRFP() throws Exception
 	{
-		Wait w=new Wait(driver);
-		Thread.sleep(10000);
-		driver.findElement(ValuationLink).click();
-		w.WaitForSomeTime();
+		validateService();
+		openRFPPage();
+		id=enterDataOnRfpForm();
+		submitRfpButton();
+		Thread.sleep(14000);
+		attachEngagementLetter();
+		return id;
+		
+	}
+	private void validateService() throws Exception
+	{
 		@SuppressWarnings("unchecked")
 		ArrayList<String> VALService=e.ReadServices("SERVICES", 2, 0);
 		s= VALService.get(0);
-		
+		Thread.sleep(10000);
 		if(driver.findElement(By.xpath("//div[@id='rfpNewServicesInner']//tbody//tr//td[label[text()='"+s+"']]")).isDisplayed())
 		{	
 			System.out.println(s +""+"Service is avaialble");
@@ -88,16 +96,16 @@ public class RFP extends Base {
 		
 	}
 	
-	public void OpenRFPPage()
+	private void openRFPPage() throws Exception
 	{
 		String abc=driver.findElement(By.xpath("//div[@id='rfpNewServicesInner']//tbody//tr//td//label[text()='"+s+"']")).getAttribute("for");
 		String numberOnly= abc.replaceAll("[^0-9]", "");
 		driver.findElement(By.xpath("//div[@id='rfpNewServicesInner']//tbody//tr//td//input[contains(@onclick,'"+numberOnly+"')]")).click();
 	}
 	
-	public String EnterDataOnRfpForm() throws InterruptedException, IOException
+	private String enterDataOnRfpForm() throws Exception
 	{
-	    Thread.sleep(6000);
+		Thread.sleep(6000);
 		driver.switchTo().frame(driver.findElement(RFPpage));
 		Thread.sleep(10000);
 		driver.findElement(BidResponseDue).click();
@@ -224,23 +232,18 @@ public class RFP extends Base {
 		driver.findElement(Fee).sendKeys(fee);
 		Thread.sleep(2000);
 		return aid;
-
-		
 	}
 	
-	public void submitRFPP() throws InterruptedException
+	private void submitRfpButton() throws Exception
 	{
 		driver.findElement(submitRFPPButton).click();
-		Thread.sleep(4000);
-	}	
+	}
 	
-	public void AttachEngagementLetter() throws InterruptedException
+	private void attachEngagementLetter() throws Exception
 	{
-		Wait w=new Wait(driver);
-		Thread.sleep(10000);
+		
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");		
 		Thread.sleep(2000);
-		w.WaitForSomeTime();
 		driver.findElement(By.xpath("//i[@class='fa fa-save']")).click();
 		Thread.sleep(4000);
 		driver.switchTo().alert().accept();
@@ -249,8 +252,6 @@ public class RFP extends Base {
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("*[id='action-buttons']/button[2]/text()")));		
 	*/
 	}
-
-	
 	
 	public String updateRFP() throws InterruptedException
 	{

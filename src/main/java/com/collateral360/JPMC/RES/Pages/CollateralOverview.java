@@ -1,10 +1,14 @@
 package com.collateral360.JPMC.RES.Pages;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.collateral360.qa.base.Base;
 import com.collateral360.qa.utilities.Wait;;
@@ -21,14 +25,14 @@ public class CollateralOverview extends Base{
 	By AddButton=By.xpath("//button[@id='addNewServiceBtn']");
 	By TaskPipeline=By.xpath("//h4[@class='smallrounded open']");
 	By CancelButton=By.xpath("//div[@id='addNewServiceModal']/div/div/div[3]//button[text()='Cancel']");
-	
+	By ValuationLink=By.xpath("//div[@id='siteMenu']/ul/li[2]/a[text()='Valuation']");	
 	@SuppressWarnings("unchecked")
 	public void AddNewServices() throws Exception
 	{
-		w=new Wait(driver);
 		//Scroll down page upto Task pipeline
-		
 		WebElement tp=driver.findElement(TaskPipeline);
+		WebDriverWait wait=new WebDriverWait(driver,40);
+		wait.until(ExpectedConditions.elementToBeClickable(tp));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",tp );
 		
@@ -111,5 +115,14 @@ public class CollateralOverview extends Base{
 		}
 		
 	}
+	
+	public void ClickOnValuation() throws InterruptedException {
+		
+			/*WebElement Valuation=driver.findElement(ValuationLink);
+			WebDriverWait wait=new WebDriverWait(driver,40);
+			wait.until(ExpectedConditions.elementToBeClickable(Valuation));*/
+			Thread.sleep(25000);
+			driver.findElement(ValuationLink).click();
+		}
 	
 }

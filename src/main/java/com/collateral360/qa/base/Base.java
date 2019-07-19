@@ -13,6 +13,7 @@ import com.collateral360.qa.utilities.Excel;
 public class Base {
 	public static Excel e;
 	public static WebDriver driver;
+	
 	public Base() throws Exception {
 		try
 		{
@@ -22,7 +23,6 @@ public class Base {
 		}catch(IOException e) {
 			e.printStackTrace();}
 }
-
 
 	 public WebDriver initialization(String Key) throws Exception
 	 {
@@ -43,10 +43,8 @@ public class Base {
 			}
 			else if(Key.equalsIgnoreCase("PARCEL"))
 			{
-				
 				 name=e.ReadExcel("sheet1", 8, 1);
 			}
-			
 			
 			if(name.equalsIgnoreCase("chrome"))
 			{
