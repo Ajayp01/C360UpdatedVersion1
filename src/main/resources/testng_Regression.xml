@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite to test C360 regression Features">
+  
+  <listeners>
+  		<listener
+  			class-name="com.collateral360.qa.utilities.ExtentReportListener"/>
+  </listeners> 
+  
+  <test name="Regression1">
+    <classes>
+      <class name="com.qa.collateral.tests.LoginPageTest"/>
+       <class name="com.qa.collateral.tests.DashboardPageTest"/>
+    </classes>
+  </test>
+</suite>

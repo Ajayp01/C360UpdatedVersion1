@@ -1,4 +1,4 @@
-package collateral.tests;
+package com.qa.collateral.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

@@ -1,4 +1,4 @@
-package collateral.tests;
+package com.qa.collateral.tests;
 
 import org.testng.Assert;
 import org.testng.ITestResult;

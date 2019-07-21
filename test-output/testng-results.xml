@@ -1,37 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="2" failed="0" ignored="0" total="5" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="177553" started-at="2019-07-04T12:39:05Z" finished-at="2019-07-04T12:42:03Z">
+  <suite name="Suite to test C360 regression Features" duration-ms="173052" started-at="2019-07-20T14:54:22Z" finished-at="2019-07-20T14:57:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="177553" started-at="2019-07-04T12:39:05Z" finished-at="2019-07-04T12:42:03Z">
-      <class name="collateral.tests.SrfTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="setup" is-config="true" duration-ms="45504" started-at="2019-07-04T12:39:05Z" finished-at="2019-07-04T12:39:51Z">
+    <test name="Regression1" duration-ms="173052" started-at="2019-07-20T14:54:22Z" finished-at="2019-07-20T14:57:15Z">
+      <class name="com.qa.collateral.tests.DashboardPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="setup" is-config="true" duration-ms="35559" started-at="2019-07-20T14:54:59Z" finished-at="2019-07-20T14:55:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="closeButtonTest()[pri:1, instance:collateral.tests.SrfTest@470734c3]" name="closeButtonTest" duration-ms="398" started-at="2019-07-04T12:39:51Z" finished-at="2019-07-04T12:39:51Z">
+        <test-method status="PASS" signature="dashboardPageTitleTest()[pri:1, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="dashboardPageTitleTest" duration-ms="3571" started-at="2019-07-20T14:55:35Z" finished-at="2019-07-20T14:55:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeButtonTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="teardown" is-config="true" duration-ms="2073" started-at="2019-07-04T12:39:51Z" finished-at="2019-07-04T12:39:53Z">
+        </test-method> <!-- dashboardPageTitleTest -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="teardown" is-config="true" duration-ms="1226" started-at="2019-07-20T14:55:38Z" finished-at="2019-07-20T14:55:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=dashboardPageTitleTest status=SUCCESS method=DashboardPageTest.dashboardPageTitleTest()[pri:1, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="setup" is-config="true" duration-ms="43816" started-at="2019-07-04T12:39:53Z" finished-at="2019-07-04T12:40:37Z">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="setup" is-config="true" duration-ms="55770" started-at="2019-07-20T14:56:19Z" finished-at="2019-07-20T14:57:15Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for title to contain "Collateral360". Current title: "EDR PARCEL Platform - Transforming Property Due Diligence & Compliance" (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-U7FIIQOJ', ip: '10.26.41.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10280, moz:profile: C:\Users\pandi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c40d7783-7f2b-4b29-8e3b-f0e72b21b67f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "Collateral360". Current title: "EDR PARCEL Platform - Transforming Property Due Diligence & Compliance" (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-U7FIIQOJ', ip: '10.26.41.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10280, moz:profile: C:\Users\pandi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c40d7783-7f2b-4b29-8e3b-f0e72b21b67f
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.collateral360.JPMC.RES.Pages.AdminDashboardPage.Impersonate(AdminDashboardPage.java:26)
+at com.qa.collateral.tests.DashboardPageTest.setup(DashboardPageTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="resCreateSRF()[pri:2, instance:collateral.tests.SrfTest@470734c3]" name="resCreateSRF" duration-ms="83738" started-at="2019-07-04T12:40:37Z" finished-at="2019-07-04T12:42:01Z">
+        <test-method status="SKIP" signature="logoTest()[pri:2, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="logoTest" duration-ms="0" started-at="2019-07-20T14:57:15Z" finished-at="2019-07-20T14:57:15Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for title to contain "Collateral360". Current title: "EDR PARCEL Platform - Transforming Property Due Diligence & Compliance" (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-U7FIIQOJ', ip: '10.26.41.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10280, moz:profile: C:\Users\pandi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c40d7783-7f2b-4b29-8e3b-f0e72b21b67f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "Collateral360". Current title: "EDR PARCEL Platform - Transforming Property Due Diligence & Compliance" (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-U7FIIQOJ', ip: '10.26.41.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10280, moz:profile: C:\Users\pandi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c40d7783-7f2b-4b29-8e3b-f0e72b21b67f
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.collateral360.JPMC.RES.Pages.AdminDashboardPage.Impersonate(AdminDashboardPage.java:26)
+at com.qa.collateral.tests.DashboardPageTest.setup(DashboardPageTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- resCreateSRF -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:collateral.tests.SrfTest@470734c3]" name="teardown" is-config="true" duration-ms="1981" started-at="2019-07-04T12:42:01Z" finished-at="2019-07-04T12:42:03Z">
+        </test-method> <!-- logoTest -->
+        <test-method status="SKIP" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="teardown" is-config="true" duration-ms="0" started-at="2019-07-20T14:57:15Z" finished-at="2019-07-20T14:57:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- collateral.tests.SrfTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="SKIP" signature="setup()[pri:0, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="setup" is-config="true" duration-ms="0" started-at="2019-07-20T14:57:15Z" finished-at="2019-07-20T14:57:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="CreateRequestButtonTest()[pri:3, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="CreateRequestButtonTest" duration-ms="0" started-at="2019-07-20T14:57:15Z" finished-at="2019-07-20T14:57:15Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for title to contain "Collateral360". Current title: "EDR PARCEL Platform - Transforming Property Due Diligence & Compliance" (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-U7FIIQOJ', ip: '10.26.41.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10280, moz:profile: C:\Users\pandi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c40d7783-7f2b-4b29-8e3b-f0e72b21b67f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "Collateral360". Current title: "EDR PARCEL Platform - Transforming Property Due Diligence & Compliance" (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-U7FIIQOJ', ip: '10.26.41.148', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10280, moz:profile: C:\Users\pandi\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c40d7783-7f2b-4b29-8e3b-f0e72b21b67f
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.collateral360.JPMC.RES.Pages.AdminDashboardPage.Impersonate(AdminDashboardPage.java:26)
+at com.qa.collateral.tests.DashboardPageTest.setup(DashboardPageTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateRequestButtonTest -->
+        <test-method status="SKIP" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.qa.collateral.tests.DashboardPageTest@15043a2f]" name="teardown" is-config="true" duration-ms="0" started-at="2019-07-20T14:57:15Z" finished-at="2019-07-20T14:57:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.collateral.tests.DashboardPageTest -->
+      <class name="com.qa.collateral.tests.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9]" name="setup" is-config="true" duration-ms="36124" started-at="2019-07-20T14:54:22Z" finished-at="2019-07-20T14:54:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9]" name="loginPageTitleTest" duration-ms="24" started-at="2019-07-20T14:54:58Z" finished-at="2019-07-20T14:54:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9]" name="teardown" is-config="true" duration-ms="1206" started-at="2019-07-20T14:54:58Z" finished-at="2019-07-20T14:54:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginPageTitleTest status=SUCCESS method=LoginPageTest.loginPageTitleTest()[pri:1, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9]" name="setup" is-config="true" duration-ms="29743" started-at="2019-07-20T14:55:40Z" finished-at="2019-07-20T14:56:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="signTest()[pri:2, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9]" name="signTest" duration-ms="7830" started-at="2019-07-20T14:56:09Z" finished-at="2019-07-20T14:56:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signTest -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9]" name="teardown" is-config="true" duration-ms="1917" started-at="2019-07-20T14:56:17Z" finished-at="2019-07-20T14:56:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signTest status=SUCCESS method=LoginPageTest.signTest()[pri:2, instance:com.qa.collateral.tests.LoginPageTest@4c60d6e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.collateral.tests.LoginPageTest -->
+    </test> <!-- Regression1 -->
+  </suite> <!-- Suite to test C360 regression Features -->
 </testng-results>
