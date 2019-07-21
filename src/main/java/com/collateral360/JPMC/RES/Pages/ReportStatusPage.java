@@ -13,7 +13,7 @@ public class ReportStatusPage extends Base {
 	}
 	
 	By ReportStatusButton=By.xpath("//div[@id='siteMenu']/ul/li[4]/a[text()='Report Status']");
-	public void CheckRFPStatus(int i) throws Exception
+	public void checkRFPStatus(int i) throws Exception
 	{
 		@SuppressWarnings("unchecked")
 		ArrayList<String> VALService=e.ReadServices("SERVICES", 2, 0);

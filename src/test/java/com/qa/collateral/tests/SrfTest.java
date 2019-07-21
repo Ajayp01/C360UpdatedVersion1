@@ -36,7 +36,7 @@ public class SrfTest extends Base {
 		l=new SrfPage();
 	}
 	
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void closeButtonTest()
 	{
 		l.validateCloseButton();
@@ -50,7 +50,7 @@ public class SrfTest extends Base {
 	public void isSRFCreated() throws Exception
 	{
 		DashboardPage d=new DashboardPage();
-		d.VerifyCreatedLoan();
+		d.verifyCreatedLoan();
 		
 	}
 	
@@ -58,8 +58,8 @@ public class SrfTest extends Base {
 	public void openLoanCreated() throws Exception 
 	{
 		DashboardPage d=new DashboardPage();
-		d.VerifyCreatedLoan();
-		d.OpenLoan();
+		d.verifyCreatedLoan();
+		d.openLoan();
 		
 	}
 	
@@ -83,25 +83,17 @@ public class SrfTest extends Base {
     //@Test(priority=7)
 	public void CreateRFP() throws Exception
 	{
-		RFP r=new RFP(driver);
-		r.CheckService();
-		r.OpenRFPPage();
-		aid=r.EnterDataOnRfpForm();
-		r.submitRFPP();
-		r.AttachEngagementLetter();
+		RFP r=new RFP();
+		r.createRFP();
 		ReportStatusPage s=new ReportStatusPage();
-		s.CheckRFPStatus(1);
+		s.checkRFPStatus(1);
 	}
    
    //@Test(priority=8)
 	public void UpdateRFP() throws Exception
 	{
-		RFP u=new RFP(driver);
-		u.CheckService();
-		u.OpenRFPPage();
+		RFP u=new RFP();
 		aid=u.updateRFP();	
-		u.AttachEngagementLetter();
-		
 	}	
    
     //@Test(priority=9)
@@ -125,7 +117,7 @@ public class SrfTest extends Base {
 		ProjectDetails p=new ProjectDetails();
 		p.AcceptAward();
 		ReportStatusPage r=new ReportStatusPage();
-		r.CheckRFPStatus(2);
+		r.checkRFPStatus(2);
 	}
 	
 	//@Test(priority=12)
@@ -141,7 +133,7 @@ public class SrfTest extends Base {
 	public void ReportStatus() throws Exception
 	{
 		ReportStatusPage r=new ReportStatusPage();
-		r.CheckRFPStatus(3);
+		r.checkRFPStatus(3);
 	}
 	
 	@AfterMethod

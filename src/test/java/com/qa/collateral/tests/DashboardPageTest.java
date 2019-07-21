@@ -36,14 +36,14 @@ public class DashboardPageTest extends Base{
 	    dashboardPageObj=new DashboardPage();
 	}
 	
-	@Test(priority=1)
+//	@Test(priority=1)
 	public void dashboardPageTitleTest()
 	{
 		String currentTitle=dashboardPageObj.dashboardPageTitle();
 		Assert.assertEquals(currentTitle, "Collateral360");
 	}
 	
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void logoTest() throws InterruptedException
 	{
 		boolean currentLogo=dashboardPageObj.logo();
@@ -51,13 +51,25 @@ public class DashboardPageTest extends Base{
 	}
 	
 	
-	@Test(priority=3)
+	//@Test(priority=3)
 	public void CreateRequestButtonTest()
 	{
 		boolean IsButtonAvailable=dashboardPageObj.validateCreateRequestButton();
 		Assert.assertTrue(IsButtonAvailable, "Create Request Button is not available");
 	}
 
+//	@Test(priority=4)
+	public void verifyCreatedLoanTest() throws Exception {
+		dashboardPageObj.verifyCreatedLoan();
+	}
+	
+	@Test(priority=5)
+	public void openLoanTest() throws Exception {
+		dashboardPageObj.verifyCreatedLoan();
+		dashboardPageObj.openLoan();
+	}
+	
+	
 	@AfterMethod
 	public void teardown(ITestResult result)
 	{
